@@ -1,0 +1,63 @@
+body{
+	padding: 0;
+	margin: 0 ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Baskerville;
+
+}
+p{
+	text-align: center;
+	font-weight: bold ;
+}
+#mainWindow{
+  	max-height: 1050px;
+  	background-color: hsla(14, 64%, 70%,0.3) ;
+	margin: auto;
+	border-radius: 12px;
+}
+#head{
+	height: 80px;
+	width: 750px;
+	text-align: center;
+	border-bottom: 1px solid #e39780;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+#userInformation{
+	height: 400px;
+	width: 750px;
+	border-bottom: 1px solid #e39780;
+	text-align: center;
+	align-content: center;
+}
+#roomRental{
+	height: 460px;
+	width: 750px;
+	border-bottom: 1px solid #e39780;
+	text-align: center;
+	align-content: center;
+}
+#agreement{
+	height: 80px;
+	width: 750px;
+	border-bottom: 1px solid #e39780;
+}
+#submitButton{
+	height: 30px;
+	width: 750px;
+	border-bottom: 1px solid #e39780;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+#CreditDebit{
+   display: none;
+}
+input{
+	border: 0px;
+	border-radius: 2px;
+}
+input:hover{
+	background-color: #eab2a1;
+}
