@@ -1,9 +1,11 @@
 body{
 	padding: 0;
 	margin: 0 ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: Baskerville;
+   background-size: cover;
+   background-repeat: no-repeat;
+   font-family: Baskerville;
+   background-image: url(photos/bgORG.svg);
+   color: #323135;
 
 }
 p{
