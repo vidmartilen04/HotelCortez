@@ -11,13 +11,13 @@
     <title>Hotel Cortez</title>
 </head>
 
-<body style="background-image: url(photos/bgORG.jpg);">
+<body>
     <script src="dist/bundle.js"></script>
    <div id="mainWindow" style="width: 750px;">
        <div id="head"><img src="photos/HCLogo3.png"></div>
     <div id="userInformation" style="height: 200px;">
         <p style="font-weight: bold; font-size: 18px ;">Please enter your personal information:</p> 
-         <form>
+         <form name="HotelRental" onsubmit="return validateForm();">
          <table style=" margin-left:auto; margin-right:auto; text-align: left; white-space:nowrap;">
              <tr>
                 <td style="font-weight: bold;">Name:<label for="fname"></label></td>
@@ -43,7 +43,7 @@
                  <td style="font-weight: bold;">Region:<label for="reg"></label>
                 <td><input type="text" id="reg" name="reg" maxlength="30" required></td>
                  <td style="font-weight: bold;">Country:</td>
-                    <td><select style="text-align: center;">
+                    <td><select style="text-align: center; width: 190px;">
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
                         <option value="Algeria">Algeria</option>
@@ -248,70 +248,75 @@
     <div id="roomRental" style="height: 580px; width: 750px; border-bottom: 1px solid #e39780;">
         <p style="text-align: center; font-weight: bold; font-size: 18px ;">Which room would you like to reserve: </p>
         <select style="width: 65%; text-align: center;">
-                     <option value="1stFloor">--------------1st Floor--------------</option>
+                     <optgroup label="1st Floor">
                      <option value="1stFloorR1">Room 101- 2 bed (Single) 1 bathroom: 60$/night</option>
                      <option value="1stFloorR2">Room 102- 1 bed (Queen) 1 bed (Single): 75$/night</option>
                      <option value="1stFloorR3">Room 103- 3 bed (Single) 2 bathroom 8$/night</option>
                      <option value="1stFloorR4">Room 104- 1 bed (King) 1 bathroom 80$/night</option>
                      <option value="1stFloorR5">Room 105- 2 bed (Queen) 2 bathroom: 90$/night</option>
-                     <option value="1stFloorR6">Room 106- 1 bed (King) 1 bed (Single) 1 bathroom: 100$/night</option>
-                     <option value="2ndFloor">--------------2nd Floor--------------</option>
+                     <option value="1stFloorR6">Room 106- 1 bed (King) 1 bed (Single) 1 bathroom: 100$/night</option></optgroup>
+                     <optgroup label="2nd Floor">2nd Floor
                      <option value="2ndFloorR1">Room 201- 2 bed (Single) 1 bathroom: 60$/night</option>
                      <option value="2ndFloorR2">Room 202- 1 bed (Queen) 1 bed (Single): 75$/night</option>
                      <option value="2ndFloorR3">Room 203- 1 bed (King) 1 bathroom: 80$/night</option>
                      <option value="2ndFloorR4">Room 204- 4 bed (Bunk) 1 bathroom: 30$/night</option>
                      <option value="2ndFloorR5">Room 205- 2 bed (Queen) 1 bed (Single) 2 bathroom:85$/night</option>
                      <option value="2ndFloorR6">Room 206- 2 bed (Queen) 2 bathroom: 90$/night</option>
-                     <option value="3rdFloor">--------------3rd Floor--------------</option>
+                     </optiongroup>
+                     <optiongroup label="3rd Floor">3rd Floor
                      <option value="3rdFloorR1">Room 301- 2 bed (Single) 1 bathroom: 60$/night</option>
                      <option value="3rdFloorR2">Room 302- 1 bed (Queen) 1 bed (Single): 75$/night</option>
                      <option value="3rdFloorR3">Room 303- 1 bed (King) 1 bathroom: 60$/night</option>
                      <option value="3rdFloorR4">Room 304- 1 bed (Queen) 1 bathroom: 55$/night</option>
                      <option value="3rdFloorR5">Room 305- 3 bed (Single) 1 bathroom: 70$/night</option>
-                     <option value="3rdFloorR6">Room 306- 2 bed (King) 2 bathroom: 95$/night</option>
-                     <option value="4thFloor">--------------4th Floor--------------</option>
+                     <option value="3rdFloorR6">Room 306- 2 bed (King) 2 bathroom: 95$/night</option>       </optgroup>
+                     <optgroup label="4th Floor">4th Floor
                      <option value="4thFloorR1">Room 401- 2 bed (Single) 1 bathroom: 60$/night</option>
                      <option value="4thFloorR2">Room 402- 1 bed (Queen) 1 bed (Single): 75$/night</option>
                      <option value="4thFloorR3">Room 403- 8 bed (Bunk) 2 bathroom: 80$/night</option>
                      <option value="4thFloorR4">Room 404- 1 bed (King) 1 bathroom: 65$/night</option>
                      <option value="4thFloorR5">Room 405- 3 bed (Single) 2 bathroom: 80$/night</option>
                      <option value="4thFloorR6">Room 406- 3 bed (Queen) 2 bathroom: 90$/night</option>
-                     <option value="5thFloor">--------------5th Floor--------------</option>
+                     </optgroup>
+                     <optgroup label="5th Floor">5th Floor
                      <option value="5thFloorR1">Room 501- 2 bed (Single) 1 bathroom: 60$/night</option>
                      <option value="5thFloorR2">Room 502- 1 bed (Queen) 1 bed (Single): 75$/night</option>
                      <option value="5thFloorR3">Room 503- 8 bed (Bunk) 2 bathroom: 80$/night</option>
                      <option value="5thFloorR4">Room 504- 2 bed (King) 2 bathroom: 95$/night</option>
                      <option value="5thFloorR5">Room 505- 1 bed (King) 1 bathroom: 60$/night</option>
-                     <option value="5thFloorR6">Room 506- 1 bed (King) 1 bed (Single) 1 bathroom: 100$/night</option>
-                     <option value="6thFloor">--------------6th Floor--------------</option>
+                     <option value="5thFloorR6">Room 506- 1 bed (King) 1 bed (Single) 1 bathroom: 100$/night</option></optgroup>
+                     <optgroup label="6thFloor">6th Floor
                      <option value="6thFloorR1">Room 601- 2 bed (Single) 1 bathroom: 60$/night</option>
                      <option value="6thFloorR2">Room 602- 1 bed (Queen) 1 bed (Single): 75$/night</option>
                      <option value="6thFloorR3">Room 603- 6 bed (Bunk) 1 bathroom: 40$/night</option>
                      <option value="6thFloorR4">Room 604- 8 bed (Bunk) 2 bathroom: 80$/night</option>
                      <option value="6thFloorR5">Room 605- 3 bed (Single) 2 bathroom: 80$/night</option>
                      <option value="6thFloorR6">Room 606- 2 bed (King) 2 bathroom: 95$/night</option>
-                     <option value="7thFloor">------------------7th Floor--------------</option>
+                     </optgroup>
+                     <optgroup label="7th Floor">7th Floor
                      <option value="7thFloorR1">Room 701- 2 bed (Single) 1 bathroom: 60$/night</option>
                      <option value="7thFloorR2">Room 702- 1 bed (Queen) 1 bed (Single): 75$/night</option>
                      <option value="7thFloorR3">Room 703- 4 bed (Bunk) 1 bathroom: 30$/night</option>
                      <option value="7thFloorR4">Room 704- 1 bed (King) 1 bathroom: 60$/night</option>
                      <option value="7thFloorR5">Room 705- 2 bed (Single) 1 bathroom: 60$/night</option>
                      <option value="7thFloorR6">Room 706- 2 bed (King) 2 bathroom: 95$/night</option>
-                     <option value="8thFloor">----------------------8th Floor----------------------</option>
+                     </optgroup>
+                     <optgroup label="8th Floor">8th Floor
                      <option value="8thFloorR1">Room 801- 2 bed (Single) 1 bathroom: 60$/night</option>
                      <option value="8thFloorR2">Room 802- 1 bed (Queen) 1 bed (Single): 75$/night</option>
                      <option value="8thFloorR3">Room 803- 2 bed (King) 2 bathroom: 95$/night</option>
                      <option value="8thFloorR4">Room 804- 2 bed (Queen) 2 bathroom: 90$/night</option>
                      <option value="8thFloorR5">Room 805- 1 bed (King) 1 bathroom: 60$/night</option>
                      <option value="8thFloorR6">Room 806- Casa Blanca Suite: 325$/night</option>
-                     <option value="9thFloor">------------------9th Floor------------------</option>
+                     </optgroup>
+                     <optgroup label="9th Floor">9th Floor
                      <option value="9thFloorR1">Room 901- 2 bed (Single) 1 bathroom: 60$/night</option>
                      <option value="9thFloorR2">Room 902- 1 bed (Queen) 1 bed (Single): 75$/night</option>
                      <option value="9thFloorR3">Room 903- Solaria Suite: 200$/night</option>
                      <option value="9thFloorR4">Room 904- Armani Suite: 225$/night</option>
                      <option value="9thFloorR5">Room 905- Cortez Suite: 300$/night</option>
                      <option value="9thFloorR6">Room 906- Predidential Suite: 450$/night</option>
-                 </select>
+                     </optgroup></select>
         <br>
         <br>
         <table style="margin-left:auto; margin-right:auto; width:80%; text-align: left;">
@@ -459,7 +464,7 @@
         <button type="button" onclick="AcceptReservation()" style="font-family: Baskerville;">Submit rental agreement
         <script>
             function AcceptReservation(){
-                Swal.fire({
+                    Swal.fire({
                       background: "#ffded4",
                       font: "Baskerville",
                       title: 'Reservation Complete',
@@ -477,7 +482,18 @@
                         hsla(14, 64%, 70%,0.3)
                       `   
                 })
-            }
+                 }
+             //if any input is empty, alert client. -- coming soon    
+            /*function validateForm() {
+              var x = document.forms["HotelRental"]["fname"].value;
+              if (x == "") {
+                Swal.fire({
+                    icon:'warning',
+                    title:'Warning',
+                    text:'Check if all fields are filled!'
+                });
+                return false;
+            */
         </script>
         </button>
     </div>
